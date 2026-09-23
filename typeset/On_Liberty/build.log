@@ -1,0 +1,327 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./On_Liberty.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/bk11.clo))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/libertine/libertine.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifxetex.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontaxes/fontaxes.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/libertine/LinLibertine_I.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/libertine/T1LinuxLibertineT-TLF.f
+d) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (./On_Liberty.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(./On_Liberty.out) (./On_Liberty.out)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
+)
+[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
+ocal/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}]
+[1{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc
+}] (./On_Liberty.toc)
+[2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc
+}]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 83.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.88 
+      [1]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[3]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[4]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[5]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[6]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[7]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[8]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[9]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[10]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[11]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[12{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.en
+c}]
+[13]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 121.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+[14]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[15]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[16]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[17]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[18]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[19]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[20]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[21]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[22]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[23]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[24]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[25]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[26]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[27]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[28]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[29]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[30]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[31]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[32]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[33]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[34]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[35]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[36]
+Underfull \hbox (badness 1122) in paragraph at lines 201--202
+[]\T1/LinuxLibertineT-TLF/m/n/10.95 (+20) The same thing holds true, gen-er-all
+y speak-ing, of all tra-di-tional
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+[37]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[38]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[39]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[40]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[41]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[42]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[43]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[44]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[45]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[46]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[47]
+[48]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 241.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+[49]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[50]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[51]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[52]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[53]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[54]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[55]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[56]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[57]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[58]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[59]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[60]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[61]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[62]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[63]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[64]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[65]
+[66]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 291.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+[67]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[68]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[69]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[70]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[71]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[72]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[73]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[74]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[75]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[76]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[77]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[78]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[79]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[80]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[81]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[82]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[83]
+[84]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 339.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+[85]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[86]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[87]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[88]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[89]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[90]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[91]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[92]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[93]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[94]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[95]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[96]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[97]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[98]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[99]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[100]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[101]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[102]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[103]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[104]
+[105]
+[106] (./On_Liberty.aux) )
+(see the transcript file for additional information)</usr/local/texlive/2025/te
+xmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></usr/local/texlive/2025
+/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr/local/texlive/
+2025/texmf-dist/fonts/type1/public/libertine/LinBiolinumTI.pfb></usr/local/texl
+ive/2025/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/local/
+texlive/2025/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr/l
+ocal/texlive/2025/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb>
+Output written on On_Liberty.pdf (109 pages, 648250 bytes).
+Transcript written on On_Liberty.log.

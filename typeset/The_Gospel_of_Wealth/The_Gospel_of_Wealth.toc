@@ -1,0 +1,13 @@
+\contentsline {chapter}{A Note on This Edition}{i}{chapter*.2}%
+\contentsline {chapter}{Introduction}{2}{chapter*.5}%
+\contentsline {chapter}{The Gospel of Wealth}{11}{chapter*.7}%
+\contentsline {chapter}{The Advantages of Poverty}{36}{chapter*.9}%
+\contentsline {chapter}{Popular Illusions about Trusts}{57}{chapter*.11}%
+\contentsline {chapter}{An Employer's View of the Labor Question}{68}{chapter*.13}%
+\contentsline {chapter}{Results of the Labor Struggle}{78}{chapter*.15}%
+\contentsline {chapter}{Distant Possessions}{90}{chapter*.17}%
+\contentsline {chapter}{Americanism versus Imperialism}{100}{chapter*.19}%
+\contentsline {chapter}{Democracy in England}{122}{chapter*.21}%
+\contentsline {chapter}{Home Rule in America}{128}{chapter*.23}%
+\contentsline {chapter}{Does America Hate England?}{144}{chapter*.25}%
+\contentsline {chapter}{Imperial Federation}{153}{chapter*.27}%

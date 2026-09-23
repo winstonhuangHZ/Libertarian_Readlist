@@ -1,0 +1,13 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+! I can't find file `Leviathan.tex'.
+<*> Leviathan.tex
+                 
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name
+! Emergency stop.
+<*> Leviathan.tex
+                 
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on texput.log.

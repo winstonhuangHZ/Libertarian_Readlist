@@ -1,0 +1,77 @@
+\contentsline {chapter}{A Note on This Edition}{i}{chapter*.2}%
+\contentsline {chapter}{Preface, 2002}{1}{chapter*.5}%
+\contentsline {chapter}{Preface, 1982}{4}{chapter*.7}%
+\contentsline {chapter}{Preface}{8}{chapter*.9}%
+\contentsline {chapter}{Introduction}{13}{chapter*.11}%
+\contentsline {section}{Notes}{15}{section*.12}%
+\contentsline {chapter}{Chapter I\hskip 1em\relax The Relation between Economic Freedom and Political Freedom}{16}{chapter*.14}%
+\contentsline {chapter}{Chapter II\hskip 1em\relax The Role of Government in a Free Society}{29}{chapter*.16}%
+\contentsline {section}{Government as Rule-Maker and Umpire}{31}{section*.17}%
+\contentsline {section}{Action Through Government on Grounds of}{34}{section*.18}%
+\contentsline {section}{Technical Monopoly and Neighborhood Effects}{34}{section*.19}%
+\contentsline {section}{Action Through Government}{38}{section*.20}%
+\contentsline {section}{On Paternalistic Grounds}{38}{section*.21}%
+\contentsline {section}{Conclusion}{40}{section*.22}%
+\contentsline {section}{Notes}{41}{section*.23}%
+\contentsline {chapter}{Chapter III\hskip 1em\relax The Control of Money}{42}{chapter*.25}%
+\contentsline {section}{A Commodity Standard}{44}{section*.26}%
+\contentsline {section}{1 a}{45}{section*.27}%
+\contentsline {section}{A Discretionary Monetary Authority}{48}{section*.28}%
+\contentsline {section}{Rules Instead of Authorities}{54}{section*.29}%
+\contentsline {section}{3 a}{57}{section*.30}%
+\contentsline {section}{Notes}{58}{section*.31}%
+\contentsline {chapter}{Chapter IV\hskip 1em\relax International Financial and Trade Arrangements}{59}{chapter*.33}%
+\contentsline {section}{The Importance of International}{59}{section*.34}%
+\contentsline {section}{Monetary Arrangements for Economic Freedom}{59}{section*.35}%
+\contentsline {section}{Current Payments and Capital Flight}{62}{section*.36}%
+\contentsline {section}{Alternative Mechanisms for}{64}{section*.37}%
+\contentsline {section}{Achieving Balance in Foreign Payments}{64}{section*.38}%
+\contentsline {section}{Floating Exchange Rates as the Free Market Solution}{68}{section*.39}%
+\contentsline {section}{The Policy Measures Necessary for a}{70}{section*.40}%
+\contentsline {section}{Free Market in Gold and Foreign Exchange}{70}{section*.41}%
+\contentsline {section}{Notes}{75}{section*.42}%
+\contentsline {chapter}{Chapter V\hskip 1em\relax Fiscal Policy}{76}{chapter*.44}%
+\contentsline {section}{Notes}{84}{section*.45}%
+\contentsline {chapter}{Chapter VI\hskip 1em\relax The Role of Government in Education}{85}{chapter*.47}%
+\contentsline {section}{General Education for Citizenship}{86}{section*.48}%
+\contentsline {section}{Nhs}{94}{section*.49}%
+\contentsline {section}{Schooling at College and University Level}{96}{section*.50}%
+\contentsline {section}{Vocational and Professional Schooling}{98}{section*.51}%
+\contentsline {section}{S.}{100}{section*.52}%
+\contentsline {section}{Notes}{103}{section*.53}%
+\contentsline {chapter}{Chapter VII\hskip 1em\relax Capitalism and Discrimination}{106}{chapter*.55}%
+\contentsline {section}{Fair Employment Practices Legislation}{108}{section*.56}%
+\contentsline {section}{Right-To-Work Laws}{112}{section*.57}%
+\contentsline {section}{Segregation in Schooling}{113}{section*.58}%
+\contentsline {section}{Notes}{115}{section*.59}%
+\contentsline {chapter}{Chapter VIII\hskip 1em\relax Monopoly and the Social Responsibility of Business and Labor}{116}{chapter*.61}%
+\contentsline {section}{The Extent of Monopoly}{117}{section*.62}%
+\contentsline {section}{189(}{119}{section*.63}%
+\contentsline {section}{195I)}{119}{section*.64}%
+\contentsline {section}{The Sources of Monopoly}{124}{section*.65}%
+\contentsline {section}{Appropriate Government Policy}{127}{section*.66}%
+\contentsline {section}{Notes}{131}{section*.67}%
+\contentsline {chapter}{Chapter IX\hskip 1em\relax Occupational Licensure}{132}{chapter*.69}%
+\contentsline {section}{Ubiquity of Governmental Restrictions}{133}{section*.70}%
+\contentsline {section}{On Economic Activities Men May Engage in}{133}{section*.71}%
+\contentsline {section}{140-4 I.}{136}{section*.72}%
+\contentsline {section}{Policy Issues Raised by Licensure}{138}{section*.73}%
+\contentsline {section}{Medical Licensure}{143}{section*.74}%
+\contentsline {section}{Notes}{152}{section*.75}%
+\contentsline {chapter}{Chapter X\hskip 1em\relax The Distribution of Income}{153}{chapter*.77}%
+\contentsline {section}{The Ethics of Distribution}{153}{section*.78}%
+\contentsline {section}{The Instrumental Role of}{157}{section*.79}%
+\contentsline {section}{Distribution According to Product}{157}{section*.80}%
+\contentsline {section}{Facts of Income Distribution}{159}{section*.81}%
+\contentsline {section}{Government Measures Used}{162}{section*.82}%
+\contentsline {section}{To Alter the Distribution of Income}{162}{section*.83}%
+\contentsline {section}{X}{166}{section*.84}%
+\contentsline {section}{Notes}{166}{section*.85}%
+\contentsline {chapter}{Chapter XI\hskip 1em\relax Social Welfare Measures}{168}{chapter*.87}%
+\contentsline {section}{Miscellaneous Welfare Measures}{168}{section*.88}%
+\contentsline {section}{Old Age and Survivor'S Insurance}{172}{section*.89}%
+\contentsline {section}{Notes}{179}{section*.90}%
+\contentsline {chapter}{Chapter XII\hskip 1em\relax The Alleviation of Poverty}{180}{chapter*.92}%
+\contentsline {section}{Liberalism and Egalitarianism}{184}{section*.93}%
+\contentsline {section}{Notes}{185}{section*.94}%
+\contentsline {chapter}{Chapter XIII\hskip 1em\relax Conclusion}{186}{chapter*.96}%

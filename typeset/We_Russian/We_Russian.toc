@@ -1,0 +1,44 @@
+\xpg@aux {}{russian}
+\contentsline {chapter}{Note on This Edition}{i}{chapter*.2}%
+\xpg@aux {}{english}
+\xpg@aux {}{russian}
+\contentsline {chapter}{Запись 1-ая}{1}{chapter*.5}%
+\contentsline {chapter}{Запись 2-ая}{3}{chapter*.7}%
+\contentsline {chapter}{Запись 3-я}{8}{chapter*.9}%
+\contentsline {chapter}{Запись 4-я}{12}{chapter*.11}%
+\contentsline {chapter}{Запись 5-я}{16}{chapter*.13}%
+\contentsline {chapter}{Запись 6-я}{19}{chapter*.15}%
+\contentsline {chapter}{Запись 7-я}{25}{chapter*.17}%
+\contentsline {chapter}{Запись 8-я}{30}{chapter*.19}%
+\contentsline {chapter}{Запись 9-я}{34}{chapter*.21}%
+\contentsline {chapter}{Запись 10-я}{38}{chapter*.23}%
+\contentsline {chapter}{Запись 11-я}{45}{chapter*.25}%
+\contentsline {chapter}{Запись 12-я}{49}{chapter*.27}%
+\contentsline {chapter}{Запись 13-я}{53}{chapter*.29}%
+\contentsline {chapter}{Запись 14-я}{58}{chapter*.31}%
+\contentsline {chapter}{Запись 15-я}{61}{chapter*.33}%
+\contentsline {chapter}{Запись 16-я}{65}{chapter*.35}%
+\contentsline {chapter}{Запись 17-я}{70}{chapter*.37}%
+\contentsline {chapter}{Запись 18-я}{76}{chapter*.39}%
+\contentsline {chapter}{Запись 19-я}{81}{chapter*.41}%
+\contentsline {chapter}{Запись 20-я}{86}{chapter*.43}%
+\contentsline {chapter}{Запись 21-я}{89}{chapter*.45}%
+\contentsline {chapter}{Запись 22-я}{94}{chapter*.47}%
+\contentsline {chapter}{Запись 23-ья}{98}{chapter*.49}%
+\contentsline {chapter}{Запись 24-ая}{102}{chapter*.51}%
+\contentsline {chapter}{Запись 25-ая}{106}{chapter*.53}%
+\contentsline {chapter}{Запись 26-ая}{112}{chapter*.55}%
+\contentsline {chapter}{Запись 27-ая}{115}{chapter*.57}%
+\contentsline {chapter}{Запись 28-ая}{121}{chapter*.59}%
+\contentsline {chapter}{Запись 29-ая}{128}{chapter*.61}%
+\contentsline {chapter}{Запись 30-ая}{131}{chapter*.63}%
+\contentsline {chapter}{Запись 31-ая}{135}{chapter*.65}%
+\contentsline {chapter}{Запись 32-ая}{141}{chapter*.67}%
+\contentsline {chapter}{Запись 33-ья}{146}{chapter*.69}%
+\contentsline {chapter}{Запись 34-ая}{147}{chapter*.71}%
+\contentsline {chapter}{Запись 35-ая}{154}{chapter*.73}%
+\contentsline {chapter}{Запись 36-ая}{159}{chapter*.75}%
+\contentsline {chapter}{Запись 37-ая}{163}{chapter*.77}%
+\contentsline {chapter}{Запись 38-ая}{167}{chapter*.79}%
+\contentsline {chapter}{Запись 39-ая}{170}{chapter*.81}%
+\contentsline {chapter}{Запись 40-ая}{175}{chapter*.83}%

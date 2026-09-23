@@ -1,0 +1,7 @@
+\contentsline {chapter}{A Note on This Edition}{i}{chapter*.2}%
+\contentsline {chapter}{Chapter 1\hskip 1em\relax Introductory}{1}{chapter*.5}%
+\contentsline {chapter}{Chapter 2\hskip 1em\relax Of the Liberty of Thought and Discussion.}{14}{chapter*.7}%
+\contentsline {chapter}{Chapter 3\hskip 1em\relax Of Individuality, as one of the Elements of Well-being.}{49}{chapter*.9}%
+\contentsline {chapter}{Chapter 4\hskip 1em\relax Of the Limits to the Authority of Society over the Individual.}{67}{chapter*.11}%
+\contentsline {chapter}{Chapter 5\hskip 1em\relax Applications.}{85}{chapter*.13}%
+\contentsline {chapter}{Notes}{106}{chapter*.15}%
