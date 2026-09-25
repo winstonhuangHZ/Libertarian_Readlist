@@ -76,7 +76,7 @@ def read_page(path):
     pane_w = data["box"][2] - data["box"][0]
     pane_h = data["box"][3] - data["box"][1]
     pane = pane_colour(data)
-    out, dropped = [], []
+    out, dropped, weak = [], [], []
     for line in data["lines"]:
         line = dict(line)
         line["flat"] = line.get("flat", 1.0)
@@ -119,9 +119,27 @@ def read_page(path):
                 dropped.append((line, "read off a pasted screenshot"))
                 continue
         if line["conf"] < 0.90:
-            dropped.append((line, "low confidence"))
+            weak.append(line)
             continue
         out.append(line)
+
+    # A shaky reading is not the same as a bad line.  Text inside a pasted
+    # screenshot comes in dense runs -- a table, a page of notes -- while a
+    # real message that the recogniser merely struggled with stands alone.
+    # Keep the loners, drop the clusters, and record both.
+    for line in weak:
+        height = max(line["y1"] - line["y0"], 30)
+        neighbours = sum(1 for other in weak
+                         if other is not line
+                         and abs(other["y0"] - line["y0"]) < 3 * height)
+        if (neighbours < 2 and line["conf"] >= 0.6
+                and len(normalise(line["text"])) >= 4):
+            line["weak"] = True
+            out.append(line)
+        else:
+            dropped.append((line, "low confidence"
+                            + ("（成簇）" if neighbours else "")))
+    out.sort(key=lambda l: (l["y0"], l["x0"]))
     return out, pane_w, dropped
 
 
