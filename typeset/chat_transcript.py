@@ -271,12 +271,13 @@ def tidy_stamp(text):
 def build(pdf, cache):
     """Read one screenshot PDF's cache into a list of messages."""
     files = sorted(f for f in os.listdir(cache) if f.endswith(".json"))
-    pages, dropped = [], []
+    pages, dropped, kept = [], [], []
     for name in files:
         lines, pane_w, gone = read_page(os.path.join(cache, name))
         pages.append(page_messages(lines, pane_w))
         dropped += [(name, line, why) for line, why in gone]
-    return stitch(pages), dropped, len(files)
+        kept += [(name, line) for line in lines]
+    return stitch(pages), dropped, kept, len(files)
 
 
 def audit(dropped):
@@ -284,11 +285,88 @@ def audit(dropped):
                    for name, line, why in dropped)
 
 
+def _n_grams(text, n=6):
+    return {text[i:i + n] for i in range(max(1, len(text) - n + 1))}
+
+
+def lost_candidates(dropped, messages):
+    """Dropped lines that the transcript does not contain anywhere else.
+
+    Consecutive screenshots overlap, so a message clipped by the bottom of
+    one page is usually read again on the next.  A dropped line that matches
+    no surviving message is the only kind worth checking by hand.
+    """
+    index = {}
+    for i, msg in enumerate(messages):
+        for gram in _n_grams(normalise(msg["text"])):
+            index.setdefault(gram, set()).add(i)
+    out = []
+    for name, line, why in dropped:
+        if why in ("window furniture", "my avatar's badge"):
+            continue
+        if line["kind"] not in ("mine", "theirs"):
+            continue
+        text = line["text"].strip()
+        norm = normalise(text)
+        if len(norm) < 3 or line["conf"] < 0.6:
+            continue
+        near = set()
+        for gram in _n_grams(norm):
+            near |= index.get(gram, set())
+        best = 0.0
+        for i in near:
+            other = normalise(messages[i]["text"])
+            if norm in other or other in norm:
+                best = 1.0
+                break
+            best = max(best, same(norm, other))
+        if best < 0.8:
+            out.append((name, line, why, best))
+    return out
+
+
+def audit_report(title, dropped, kept, messages):
+    """What was thrown away, and what is worth a second look.
+
+    Two lists matter.  A dropped line that sat on a bubble colour could be a
+    real message lost to a rule; a kept line whose background was busy is
+    probably text read off a picture that the rules let through.  Both are
+    listed with the source page so they can be checked against the
+    screenshot.
+    """
+    counts = Counter(why for _, _, why in dropped)
+    out = ["# %s — 审计" % title, "",
+           "OCR 读到 %d 行，保留 %d 行，丢弃 %d 行。"
+           % (len(kept) + len(dropped), len(kept), len(dropped)), "",
+           "| 原因 | 行数 |", "| --- | --- |"]
+    out += ["| %s | %d |" % (why, n) for why, n in counts.most_common()]
+
+    risky = lost_candidates(dropped, messages)
+    out += ["", "## 可能真的丢了（气泡底色，且在别处找不到同一条）", "",
+            "相邻截图重叠，被裁在页边的消息通常会在下一页读全，所以下面这些"
+            "是唯一值得人工核对的。抽查时重点看这些页。", ""]
+    if not risky:
+        out.append("（无）")
+    by_page = Counter(name for name, _, _, _ in risky)
+    out += ["| 截图页 | 候选行数 | 该页样例 |", "| --- | --- | --- |"]
+    for name, n in by_page.most_common():
+        sample = next(l["text"] for nm, l, _, _ in risky if nm == name)
+        out.append("| 第 %d 页 | %d | %s |" % (int(name[:4]) + 1, n, sample[:34]))
+    out += ["", "### 逐条", ""]
+    for name, line, why, best in risky:
+        out.append("- 第 %d 页 · %s · %s · conf %.2f · 最像 %.2f · %s"
+                   % (int(name[:4]) + 1, why,
+                      "我" if line["kind"] == "mine" else "对方",
+                      line["conf"], best, line["text"]))
+    return "\n".join(out) + "\n"
+
+
 def join(parts):
     """One transcript out of several files, with the seams marked."""
     out = ["# %s" % parts["title"], "",
            "钉钉聊天记录转录，由全屏截图 OCR 而成。说话人按气泡底色区分："
            "「我」为蓝色气泡，对方为白色气泡。", ""]
+    audit_dir = parts.get("audit_dir")
     for i, part in enumerate(parts["parts"], 1):
         name = os.path.basename(part["pdf"])
         if i > 1:
@@ -299,10 +377,14 @@ def join(parts):
                     ""]
         else:
             out += ["", "## 文件 1/%d：%s" % (len(parts["parts"]), name), ""]
-        messages, dropped, pages = build(part["pdf"], part["cache"])
+        messages, dropped, kept, pages = build(part["pdf"], part["cache"])
         out += render(messages)
         print("%-22s %4d pages  %5d messages  %4d lines dropped"
               % (name, pages, len(messages), len(dropped)), file=sys.stderr)
+        if audit_dir:
+            stem = os.path.splitext(name)[0]
+            open(os.path.join(audit_dir, "审计_%s.md" % stem), "w").write(
+                audit_report(stem, dropped, [l for _, l in kept], messages))
     return "\n".join(out) + "\n"
 
 
@@ -316,7 +398,7 @@ def main():
         return
 
     pdf, cache = sys.argv[1], sys.argv[2]
-    messages, dropped, pages = build(pdf, cache)
+    messages, dropped, kept, pages = build(pdf, cache)
     title = os.path.splitext(os.path.basename(pdf))[0]
     text = "\n".join(header(title, pages, os.path.basename(pdf))
                      + render(messages)) + "\n"
@@ -327,6 +409,10 @@ def main():
         open(sys.argv[sys.argv.index("--dropped") + 1], "w").write(audit(dropped))
     if "--out" in sys.argv:
         open(sys.argv[sys.argv.index("--out") + 1], "w").write(text)
+    if "--audit" in sys.argv:
+        open(sys.argv[sys.argv.index("--audit") + 1], "w").write(
+            audit_report(os.path.splitext(os.path.basename(pdf))[0], dropped,
+                         [l for _, l in kept], messages))
     sys.stdout.write(text)
     print("messages:", len(messages), " dropped lines:", len(dropped),
           file=sys.stderr)
