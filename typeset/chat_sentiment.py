@@ -14,6 +14,7 @@ the block-and-unblock game, and how much is exam fatigue.  Those counts are
 lexical, so every one of them can be checked against the messages it caught.
 """
 
+import datetime
 import json
 import os
 import re
@@ -110,6 +111,75 @@ def cared_for(messages, reach=15):
     return table, hits
 
 
+# ---------------------------------------------------------------- balance
+
+ASKED = (r"说话|說啊|你人呢|你人在哪|在吗|在嗎|回我|为什么不|為什麼不|你倒是|"
+         r"你特么|你他妈|where are you|不回|喂")
+SOLID = (r"https?://|分享链接|\.pdf|下载|文件|資料|资料|日程|时间表|時間表|"
+         r"答案|帮你|幫你|给你看|发你|发我|表格")
+SORRY = r"對不起|对不起|我錯了|我错了|抱歉|sry|sorry|原諒|原谅"
+WITHDRAW = r"免打扰|免打擾|mute|不解|解我|呆在|block|拉黑"
+
+
+def balance(messages):
+    """Who opens, who goes quiet, who takes things back, who does the work.
+
+    The conversation is not symmetrical, and the interesting part is *how*:
+    one side pursues and takes words back, the other side answers, does the
+    practical favours, and occasionally withholds.
+    """
+    chat = [m for m in messages if m["side"] != "notice"]
+    notices = [m for m in messages if m["side"] == "notice"]
+
+    def who(msg):
+        return "我" if msg["side"] == "mine" else "ben"
+
+    days = {}
+    for msg in chat:
+        if msg["date"]:
+            days.setdefault(msg["date"], []).append(msg)
+    opener = Counter(who(v[0]) for v in days.values())
+
+    silences = Counter()
+    for a, b in zip(chat, chat[1:]):
+        if not all([a["date"], b["date"], a["clock"], b["clock"]]):
+            continue
+        t1 = datetime.datetime.combine(
+            a["date"], datetime.time(int(a["clock"][:2]), int(a["clock"][3:])))
+        t2 = datetime.datetime.combine(
+            b["date"], datetime.time(int(b["clock"][:2]), int(b["clock"][3:])))
+        hours = (t2 - t1).total_seconds() / 3600
+        if 24 <= hours < 240:
+            silences[who(b)] += 1
+
+    taken_back = Counter()
+    for notice in notices:
+        name = re.search(r"（系统消息）(.+?)撤回", notice["text"])
+        taken_back[name.group(1) if name else "?"] += 1
+
+    ledger = Counter()
+    support = Counter()
+    for msg in chat:
+        side, text = who(msg), msg["text"]
+        month = "%d-%02d" % (msg["date"].year, msg["date"].month) if msg["date"] else "?"
+        if re.search(SORRY, text, re.I):
+            ledger[(side, "道歉")] += 1
+        if re.search(WITHDRAW, text, re.I):
+            ledger[(side, "提拉黑／免打扰")] += 1
+        if re.search(ASKED, text, re.I):
+            ledger[(side, "催回复／追问")] += 1
+        if side == "ben" and re.search(SOLID, text, re.I):
+            support[month] += 1
+    return {
+        "opener": dict(opener),
+        "days": len(days),
+        "silences_broken": dict(silences),
+        "taken_back": dict(taken_back),
+        "ledger": {"%s|%s" % k: v for k, v in ledger.items()},
+        "ben_support_by_month": dict(sorted(support.items())),
+    }
+
+
 def main():
     manifest = json.load(open(sys.argv[1]))
     everything = []
@@ -124,6 +194,7 @@ def main():
         "per_week": {k: dict(v) for k, v in per_week.items()},
         "per_speaker": {k: dict(v) for k, v in per_speaker.items()},
         "care": {"%s|%s" % k: v for k, v in table.items()},
+        "balance": balance(everything),
         "total": len(chat),
     }
     if "--json" in sys.argv:
@@ -146,6 +217,15 @@ def main():
             continue
         print("  %s 喊累 %d 次 · 对方回了 %d 次 · 其中带关心 %d 次"
               % (who, total, table[(who, "有人回应")], table[(who, "关心")]))
+    bal = result["balance"]
+    print("\n谁先开口（每天第一条）：%s（共 %d 天）"
+          % (bal["opener"], bal["days"]))
+    print("24 小时以上的静默由谁打破：%s" % bal["silences_broken"])
+    print("撤回：%s" % bal["taken_back"])
+    for key in sorted(bal["ledger"]):
+        print("  %-16s %d" % (key, bal["ledger"][key]))
+    print("ben 发链接／文件／资料／答案：%s（合计 %d）"
+          % (bal["ben_support_by_month"], sum(bal["ben_support_by_month"].values())))
     print("\n样例已写出" if "--samples" in sys.argv else "")
 
 
