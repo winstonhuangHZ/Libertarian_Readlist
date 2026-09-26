@@ -1,0 +1,230 @@
+\contentsline {chapter}{Dē hāc editīone}{i}{chapter*.2}%
+\contentsline {chapter}{Cap. I\hskip 1em\relax Imperium Rōmānum}{1}{chapter*.5}%
+\contentsline {section}{Litterae et numerī}{2}{section*.6}%
+\contentsline {section}{Grammatica Latīna}{3}{section*.7}%
+\contentsline {section}{Pēnsum A}{3}{section*.8}%
+\contentsline {section}{Pēnsum B}{4}{section*.9}%
+\contentsline {section}{Pēnsum C}{4}{section*.10}%
+\contentsline {section}{Vocābula nova}{4}{section*.11}%
+\contentsline {chapter}{Cap. II\hskip 1em\relax Familia Rōmāna}{5}{chapter*.13}%
+\contentsline {section}{Lībertus Latīnus}{6}{section*.14}%
+\contentsline {section}{Grammatica Latīna}{7}{section*.15}%
+\contentsline {section}{Pēnsum A}{7}{section*.16}%
+\contentsline {section}{Pēnsum B}{8}{section*.17}%
+\contentsline {section}{Pēnsum C}{8}{section*.18}%
+\contentsline {section}{Vocābula nova}{8}{section*.19}%
+\contentsline {chapter}{Cap. III\hskip 1em\relax Puer improbus}{9}{chapter*.21}%
+\contentsline {section}{Scaena prīma}{9}{section*.22}%
+\contentsline {section}{Scaena secunda}{9}{section*.23}%
+\contentsline {section}{Scaena tertia}{10}{section*.24}%
+\contentsline {section}{Grammatica Latīna}{10}{section*.25}%
+\contentsline {section}{Pēnsum A}{11}{section*.26}%
+\contentsline {section}{Pēnsum B}{11}{section*.27}%
+\contentsline {section}{Pēnsum C}{11}{section*.28}%
+\contentsline {section}{Vocābula nova}{12}{section*.29}%
+\contentsline {chapter}{Cap. IV\hskip 1em\relax Dominus et servī}{13}{chapter*.31}%
+\contentsline {section}{Scaena prīma}{13}{section*.32}%
+\contentsline {section}{Scaena secunda}{13}{section*.33}%
+\contentsline {section}{Scaena tertia}{14}{section*.34}%
+\contentsline {section}{Grammatica Latīna}{14}{section*.35}%
+\contentsline {section}{Pēnsum A}{15}{section*.36}%
+\contentsline {section}{Pēnsum B}{15}{section*.37}%
+\contentsline {section}{Pēnsum C}{15}{section*.38}%
+\contentsline {section}{Vocābula nova}{16}{section*.39}%
+\contentsline {chapter}{Cap. V\hskip 1em\relax Vīlla et hortus}{17}{chapter*.41}%
+\contentsline {section}{Grammatica Latīna}{19}{section*.42}%
+\contentsline {section}{Pēnsum A}{19}{section*.43}%
+\contentsline {section}{Pēnsum B}{20}{section*.44}%
+\contentsline {section}{Pēnsum C}{20}{section*.45}%
+\contentsline {section}{Vocābula nova}{20}{section*.46}%
+\contentsline {chapter}{Cap. VI\hskip 1em\relax Via Latīna}{21}{chapter*.48}%
+\contentsline {section}{Grammatica Latīna}{23}{section*.49}%
+\contentsline {section}{Pēnsum A}{23}{section*.50}%
+\contentsline {section}{Pēnsum B}{24}{section*.51}%
+\contentsline {section}{Pēnsum C}{24}{section*.52}%
+\contentsline {section}{Vocābula nova}{24}{section*.53}%
+\contentsline {chapter}{Cap. VII\hskip 1em\relax Puella et rosa}{25}{chapter*.55}%
+\contentsline {section}{Grammatica Latīna}{27}{section*.56}%
+\contentsline {section}{Pēnsum A}{27}{section*.57}%
+\contentsline {section}{Pēnsum B}{27}{section*.58}%
+\contentsline {section}{Pēnsum C}{27}{section*.59}%
+\contentsline {section}{Vocābula nova}{28}{section*.60}%
+\contentsline {chapter}{Cap. VIII\hskip 1em\relax Taberna Rōmāna}{29}{chapter*.62}%
+\contentsline {section}{Grammatica Latīna}{31}{section*.63}%
+\contentsline {section}{Pēnsum A}{33}{section*.64}%
+\contentsline {section}{Pēnsum B}{34}{section*.65}%
+\contentsline {section}{Pēnsum C}{34}{section*.66}%
+\contentsline {section}{Vocābula nova}{34}{section*.67}%
+\contentsline {chapter}{Cap. IX\hskip 1em\relax Pāstor et ovēs}{35}{chapter*.69}%
+\contentsline {section}{Grammatica Latīna}{36}{section*.70}%
+\contentsline {section}{Pēnsum A}{37}{section*.71}%
+\contentsline {section}{Pēnsum B}{37}{section*.72}%
+\contentsline {section}{Pēnsum C}{38}{section*.73}%
+\contentsline {section}{Vocābula nova}{38}{section*.74}%
+\contentsline {chapter}{Cap. X\hskip 1em\relax Bēstiae et hominēs}{39}{chapter*.76}%
+\contentsline {section}{Grammatica Latīna}{41}{section*.77}%
+\contentsline {section}{Pēnsum A}{42}{section*.78}%
+\contentsline {section}{Pēnsum B}{43}{section*.79}%
+\contentsline {section}{Pēnsum C}{43}{section*.80}%
+\contentsline {section}{Vocābula nova}{43}{section*.81}%
+\contentsline {chapter}{Cap. XI\hskip 1em\relax Corpus hūmānum}{44}{chapter*.83}%
+\contentsline {section}{Grammatica Latīna}{46}{section*.84}%
+\contentsline {section}{Pēnsum A}{47}{section*.85}%
+\contentsline {section}{Pēnsum B}{47}{section*.86}%
+\contentsline {section}{Pēnsum C}{48}{section*.87}%
+\contentsline {section}{Vocābula nova}{48}{section*.88}%
+\contentsline {chapter}{Cap. XII\hskip 1em\relax Mīles Rōmānus}{49}{chapter*.90}%
+\contentsline {section}{Grammatica Latīna}{51}{section*.91}%
+\contentsline {section}{Pēnsum A}{53}{section*.92}%
+\contentsline {section}{Pēnsum B}{53}{section*.93}%
+\contentsline {section}{Pēnsum C}{54}{section*.94}%
+\contentsline {section}{Vocābula nova}{54}{section*.95}%
+\contentsline {chapter}{Cap. XIII\hskip 1em\relax Annus et mēnsēs}{55}{chapter*.97}%
+\contentsline {section}{Grammatica Latīna}{58}{section*.98}%
+\contentsline {section}{Pēnsum A}{58}{section*.99}%
+\contentsline {section}{Pēnsum B}{58}{section*.100}%
+\contentsline {section}{Pēnsum C}{59}{section*.101}%
+\contentsline {section}{Vocābula nova}{59}{section*.102}%
+\contentsline {chapter}{Cap. XIV\hskip 1em\relax Novus diēs}{60}{chapter*.104}%
+\contentsline {section}{Grammatica Latīna}{62}{section*.105}%
+\contentsline {section}{Pēnsum A}{63}{section*.106}%
+\contentsline {section}{Pēnsum B}{63}{section*.107}%
+\contentsline {section}{Pēnsum C}{63}{section*.108}%
+\contentsline {section}{Vocābula nova}{63}{section*.109}%
+\contentsline {chapter}{Cap. XV\hskip 1em\relax Magister et discipulī}{64}{chapter*.111}%
+\contentsline {section}{Grammatica Latīna}{66}{section*.112}%
+\contentsline {section}{Pēnsum A}{67}{section*.113}%
+\contentsline {section}{Pēnsum B}{67}{section*.114}%
+\contentsline {section}{Pēnsum C}{68}{section*.115}%
+\contentsline {section}{Vocābula nova}{68}{section*.116}%
+\contentsline {chapter}{Cap. XVI\hskip 1em\relax Tempestās}{69}{chapter*.118}%
+\contentsline {section}{Grammatica Latīna}{72}{section*.119}%
+\contentsline {section}{Pēnsum A}{72}{section*.120}%
+\contentsline {section}{Pēnsum B}{72}{section*.121}%
+\contentsline {section}{Pēnsum C}{73}{section*.122}%
+\contentsline {section}{Vocābula nova}{73}{section*.123}%
+\contentsline {chapter}{Cap. XVII\hskip 1em\relax Numerī difficilēs}{74}{chapter*.125}%
+\contentsline {section}{Grammatica Latīna}{77}{section*.126}%
+\contentsline {section}{Pēnsum A}{78}{section*.127}%
+\contentsline {section}{Pēnsum B}{78}{section*.128}%
+\contentsline {section}{Pēnsum C}{78}{section*.129}%
+\contentsline {section}{Vocābula nova}{79}{section*.130}%
+\contentsline {chapter}{Cap. XVIII\hskip 1em\relax Litterae Latīnae}{80}{chapter*.132}%
+\contentsline {section}{Grammatica Latīna}{83}{section*.133}%
+\contentsline {section}{Pēnsum A}{84}{section*.134}%
+\contentsline {section}{Pēnsum B}{84}{section*.135}%
+\contentsline {section}{Pēnsum C}{85}{section*.136}%
+\contentsline {section}{Vocābula nova}{85}{section*.137}%
+\contentsline {chapter}{Cap. XIX\hskip 1em\relax Marītus et uxor}{86}{chapter*.139}%
+\contentsline {section}{Grammatica Latīna}{89}{section*.140}%
+\contentsline {section}{Pēnsum A}{90}{section*.141}%
+\contentsline {section}{Pēnsum B}{90}{section*.142}%
+\contentsline {section}{Pēnsum C}{91}{section*.143}%
+\contentsline {section}{Vocābula nova}{91}{section*.144}%
+\contentsline {chapter}{Cap. XX\hskip 1em\relax Parentēs}{92}{chapter*.146}%
+\contentsline {section}{Grammatica Latīna}{95}{section*.147}%
+\contentsline {section}{Pēnsum A}{96}{section*.148}%
+\contentsline {section}{Pēnsum B}{97}{section*.149}%
+\contentsline {section}{Pēnsum C}{97}{section*.150}%
+\contentsline {section}{Vocābula nova}{97}{section*.151}%
+\contentsline {chapter}{Cap. XXI\hskip 1em\relax Pugna discipulōrum}{98}{chapter*.153}%
+\contentsline {section}{Grammatica Latīna}{101}{section*.154}%
+\contentsline {section}{Pēnsum A}{102}{section*.155}%
+\contentsline {section}{Pēnsum B}{102}{section*.156}%
+\contentsline {section}{Pēnsum C}{102}{section*.157}%
+\contentsline {section}{Vocābula nova}{103}{section*.158}%
+\contentsline {chapter}{Cap. XXII\hskip 1em\relax Cavē canem}{104}{chapter*.160}%
+\contentsline {section}{Grammatica Latīna}{106}{section*.161}%
+\contentsline {section}{Pēnsum A}{107}{section*.162}%
+\contentsline {section}{Pēnsum B}{107}{section*.163}%
+\contentsline {section}{Pēnsum C}{107}{section*.164}%
+\contentsline {section}{Vocābula nova}{107}{section*.165}%
+\contentsline {chapter}{Cap. XXIII\hskip 1em\relax Epistula magistrī}{109}{chapter*.167}%
+\contentsline {section}{Grammatica Latīna}{112}{section*.168}%
+\contentsline {section}{Pēnsum A}{112}{section*.169}%
+\contentsline {section}{Pēnsum B}{112}{section*.170}%
+\contentsline {section}{Pēnsum C}{113}{section*.171}%
+\contentsline {section}{Vocābula nova}{113}{section*.172}%
+\contentsline {chapter}{Cap. XXIV\hskip 1em\relax Puer aegrōtus}{114}{chapter*.174}%
+\contentsline {section}{Grammatica Latīna}{116}{section*.175}%
+\contentsline {section}{Pēnsum A}{117}{section*.176}%
+\contentsline {section}{Pēnsum B}{117}{section*.177}%
+\contentsline {section}{Pēnsum C}{118}{section*.178}%
+\contentsline {section}{Vocābula nova}{118}{section*.179}%
+\contentsline {chapter}{Cap. XXV\hskip 1em\relax Thēseus et Mīnōtaurus}{119}{chapter*.181}%
+\contentsline {section}{Grammatica Latīna}{121}{section*.182}%
+\contentsline {section}{Pēnsum A}{122}{section*.183}%
+\contentsline {section}{Pēnsum B}{122}{section*.184}%
+\contentsline {section}{Pēnsum C}{122}{section*.185}%
+\contentsline {section}{Vocābula nova}{123}{section*.186}%
+\contentsline {chapter}{Cap. XXVI\hskip 1em\relax Daedalus et Īcarus}{124}{chapter*.188}%
+\contentsline {section}{Grammatica Latīna}{127}{section*.189}%
+\contentsline {section}{Pēnsum A}{127}{section*.190}%
+\contentsline {section}{Pēnsum B}{127}{section*.191}%
+\contentsline {section}{Pēnsum C}{128}{section*.192}%
+\contentsline {section}{Vocābula nova}{128}{section*.193}%
+\contentsline {chapter}{Cap. XXVII\hskip 1em\relax Rēs rūsticae}{129}{chapter*.195}%
+\contentsline {section}{Grammatica Latīna}{132}{section*.196}%
+\contentsline {section}{Pēnsum A}{133}{section*.197}%
+\contentsline {section}{Pēnsum B}{134}{section*.198}%
+\contentsline {section}{Pēnsum C}{134}{section*.199}%
+\contentsline {section}{Vocābula nova}{134}{section*.200}%
+\contentsline {chapter}{Cap. XXVIII\hskip 1em\relax Perīcula maris}{135}{chapter*.202}%
+\contentsline {section}{Grammatica Latīna}{138}{section*.203}%
+\contentsline {section}{Pēnsum A}{139}{section*.204}%
+\contentsline {section}{Pēnsum B}{140}{section*.205}%
+\contentsline {section}{Pēnsum C}{140}{section*.206}%
+\contentsline {section}{Vocābula nova}{140}{section*.207}%
+\contentsline {chapter}{Cap. XXIX\hskip 1em\relax Nāvigāre necesse est}{141}{chapter*.209}%
+\contentsline {section}{Grammatica Latīna}{145}{section*.210}%
+\contentsline {section}{Pēnsum A}{145}{section*.211}%
+\contentsline {section}{Pēnsum B}{145}{section*.212}%
+\contentsline {section}{Pēnsum C}{146}{section*.213}%
+\contentsline {section}{Vocābula nova}{146}{section*.214}%
+\contentsline {chapter}{Cap. XXX\hskip 1em\relax Convīvium}{147}{chapter*.216}%
+\contentsline {section}{Grammatica Latīna}{150}{section*.217}%
+\contentsline {section}{Pēnsum A}{151}{section*.218}%
+\contentsline {section}{Pēnsum B}{151}{section*.219}%
+\contentsline {section}{Pēnsum C}{151}{section*.220}%
+\contentsline {section}{Vocābula nova}{151}{section*.221}%
+\contentsline {chapter}{Cap. XXXI\hskip 1em\relax Inter pōcula}{153}{chapter*.223}%
+\contentsline {section}{Grammatica Latīna}{157}{section*.224}%
+\contentsline {section}{Pēnsum A}{157}{section*.225}%
+\contentsline {section}{Pēnsum B}{158}{section*.226}%
+\contentsline {section}{Pēnsum C}{158}{section*.227}%
+\contentsline {section}{Vocābula nova}{158}{section*.228}%
+\contentsline {chapter}{Cap. XXXII\hskip 1em\relax Classis Rōmāna}{159}{chapter*.230}%
+\contentsline {section}{Grammatica Latīna}{163}{section*.231}%
+\contentsline {section}{Pēnsum A}{164}{section*.232}%
+\contentsline {section}{Pēnsum B}{164}{section*.233}%
+\contentsline {section}{Pēnsum C}{165}{section*.234}%
+\contentsline {section}{Vocābula nova}{165}{section*.235}%
+\contentsline {chapter}{Cap. XXXIII\hskip 1em\relax Exercitus Rōmānus}{166}{chapter*.237}%
+\contentsline {section}{Grammatica Latīna}{169}{section*.238}%
+\contentsline {section}{Pēnsum A}{170}{section*.239}%
+\contentsline {section}{Pēnsum B}{171}{section*.240}%
+\contentsline {section}{Pēnsum C}{171}{section*.241}%
+\contentsline {section}{Vocābula nova}{171}{section*.242}%
+\contentsline {chapter}{Cap. XXXIV\hskip 1em\relax Dē arte poēticā}{173}{chapter*.244}%
+\contentsline {section}{Grammatica Latīna}{177}{section*.245}%
+\contentsline {section}{Dē versibus}{177}{section*.246}%
+\contentsline {section}{Pēnsum A}{178}{section*.247}%
+\contentsline {section}{Pēnsum B}{178}{section*.248}%
+\contentsline {section}{Pēnsum C}{179}{section*.249}%
+\contentsline {section}{Vocābula nova}{179}{section*.250}%
+\contentsline {chapter}{Cap. XXXV\hskip 1em\relax Ars grammatica}{180}{chapter*.252}%
+\contentsline {section}{Dē partibus ōrātiōnis}{180}{section*.253}%
+\contentsline {section}{Dē nōmine}{180}{section*.254}%
+\contentsline {section}{Dē prōnōmine}{180}{section*.255}%
+\contentsline {section}{Dē verbō}{181}{section*.256}%
+\contentsline {section}{Dē adverbiō}{181}{section*.257}%
+\contentsline {section}{Dē participiō}{182}{section*.258}%
+\contentsline {section}{Dē coniūnctiōne}{182}{section*.259}%
+\contentsline {section}{Dē praepositiōne}{183}{section*.260}%
+\contentsline {section}{Dē interiectiōne}{183}{section*.261}%
+\contentsline {section}{Grammatica Latīna}{184}{section*.262}%
+\contentsline {section}{Pēnsum A}{184}{section*.263}%
+\contentsline {section}{Pēnsum B}{184}{section*.264}%
+\contentsline {section}{Pēnsum C}{185}{section*.265}%
+\contentsline {section}{Vocābula nova}{185}{section*.266}%
+\contentsline {chapter}{Notae}{186}{chapter*.268}%
