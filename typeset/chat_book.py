@@ -22,6 +22,7 @@ import bookkit as bk
 import chat_transcript as ct
 
 RULE = "-" * 72
+MINUTE_GAP = 10          # show a clock only when this much time has passed
 
 
 def escape(text):
@@ -37,6 +38,12 @@ def date_of(stamp):
 def clock(stamp):
     m = re.search(r"(\d{1,2}:\d{2})", stamp or "")
     return m.group(1) if m else ""
+
+
+def minutes_of(stamp):
+    """The clock of a stamp as minutes past midnight, or None."""
+    m = re.search(r"(\d{1,2}):(\d{2})", stamp or "")
+    return int(m.group(1)) * 60 + int(m.group(2)) if m else None
 
 
 def title_of(day, year):
@@ -69,30 +76,35 @@ def chapters(messages, start_year=2025):
     return groups
 
 
-def line_of(msg):
+def line_of(msg, other="ben"):
     """One message as (speaker, text, quote, notice)."""
     if msg["side"] == "notice":
         return None, None, None, msg["text"]
-    who = "我" if msg["side"] == "mine" else "ben"
+    who = "我" if msg["side"] == "mine" else other
     return who, msg["text"], msg["quote"], None
 
 
 # ------------------------------------------------------------------- text
 
 def text_book(parts, manifest):
-    out = ["%s" % manifest.get("title", "钉钉聊天记录"), "=" * 72, "",
-           "由钉钉全屏截图 OCR 而成。说话人按气泡底色区分："
-           "「我」为蓝色气泡，对方为白色气泡。", "",
-           "图片、表情、语音不收录；粘贴截图里的文字按规则剔除。", ""]
+    wechat = any(part.get("kind") == "wechat" for part, _, _ in parts)
+    out = ["%s" % manifest.get("title", "聊天记录"), "=" * 72, "",
+           ("由微信聊天导出直接读取，没有识别环节。" if wechat else
+            "由钉钉全屏截图 OCR 而成。说话人按气泡底色区分："
+            "「我」为蓝色气泡，对方为白色气泡。"), "",
+           "图片、表情、语音不收录。", ""]
     for i, (part, messages, pages) in enumerate(parts, 1):
+        source = ("（%d 条）" % len(messages) if part.get("kind") == "wechat"
+                  else "（%d 页）" % pages)
         out += ["", RULE,
-                "第 %d 部分 / %d：%s（%d 页）"
-                % (i, len(parts), os.path.basename(part["pdf"]), pages), RULE, ""]
+                "第 %d 部分 / %d：%s%s"
+                % (i, len(parts), os.path.basename(part["pdf"]), source),
+                RULE, ""]
         for day, title, msgs in chapters(messages):
             if title:
                 out += ["", title, ""]
             for msg in msgs:
-                who, text, quote, notice = line_of(msg)
+                who, text, quote, notice = line_of(msg, manifest.get("other", "ben"))
                 if notice:
                     out.append("        %s" % notice)
                     continue
@@ -157,21 +169,43 @@ PREAMBLE = r"""\documentclass[10pt,openany,fontset=mac]{ctexbook}
 
 def note_on_edition(parts, total, pages_total):
     rows = "\n".join(
-        r"\item %s（%d 页，%s 至 %s）"
-        % (escape(os.path.basename(p["pdf"])), pages,
+        (r"\item %s（%d 条，%s 至 %s）" if p.get("kind") == "wechat"
+         else r"\item %s（%d 页，%s 至 %s）")
+        % (escape(os.path.basename(p["pdf"])),
+           len(msgs) if p.get("kind") == "wechat" else pages,
            day_range(msgs)[0], day_range(msgs)[1])
         for p, msgs, pages in parts)
-    return r"""\chapter*{编者说明}
+    kinds = {p.get("kind", "screenshots") for p, _, _ in parts}
+    if kinds == {"wechat"}:
+        opening = ("这份文字来自微信聊天导出，共 @@NMSGS@@ 条消息。")
+        how = WECHAT_NOTE
+    elif kinds == {"wechat", "screenshots"}:
+        opening = ("这份文字来自两个来源：钉钉的桌面端全屏截图，和微信的"
+                   "聊天导出，共 @@NMSGS@@ 条消息。")
+        how = WECHAT_NOTE + "\n\n" + SCREENSHOT_NOTE
+    else:
+        opening = ("这份文字来自 @@NFILES@@ 个 PDF 里的钉钉桌面端全屏截图，"
+                   "共 @@NPAGES@@ 页、@@NMSGS@@ 条消息。")
+        how = SCREENSHOT_NOTE
+    return (r"""\chapter*{编者说明}
 \addcontentsline{toc}{chapter}{编者说明}
 \markboth{编者说明}{编者说明}
 
-这份文字来自 @@NFILES@@ 个 PDF 里的钉钉桌面端全屏截图，共 @@NPAGES@@ 页、
-@@NMSGS@@ 条消息。
+""" + opening + r"""
 
 \begin{itemize}\small
 @@ROWS@@
 \end{itemize}
 
+""" + how + r"""
+
+\clearpage
+""").replace("@@NFILES@@", str(len(parts))) \
+     .replace("@@NPAGES@@", str(pages_total)) \
+     .replace("@@NMSGS@@", "%d" % total).replace("@@ROWS@@", rows)
+
+
+SCREENSHOT_NOTE = r"""
 每页截图都被切掉了窗口本身的东西——左侧会话列表、顶部搜索栏、聊天
 标题、底部输入框——只留下对话区，再用 PP-OCRv6 识别。说话人不是猜
 的：钉钉给自己的气泡上蓝色、给对方的上白色，颜色就是归属；引用块在
@@ -190,10 +224,15 @@ def note_on_edition(parts, total, pages_total):
 
 截图本身不带年份。日期按截图拍摄时间（2025 年 11 月）和对话的先后
 顺序推定为 2025 年，因而星期几也是据此算出的。
+"""
 
-\clearpage
-""".replace("@@NFILES@@", str(len(parts))).replace("@@NPAGES@@", str(pages_total)) \
-   .replace("@@NMSGS@@", "%d" % total).replace("@@ROWS@@", rows)
+
+WECHAT_NOTE = r"""
+每条消息本来就带着发送人和时间戳，所以这一份没有识别环节，也没有识别
+错误：文字是导出里原样的文字。图片、表情、语音、文件按类型标出（例如
+「[文件] 报告.pdf」），内容不收录；引用了某句话的回复，在正文下方用
+「引用 …」还原。时间戳是这台电脑的本地时间。
+"""
 
 
 def first_day(messages):
@@ -238,20 +277,29 @@ def tex_book(parts, manifest):
             r"\tableofcontents", r"\clearpage", r"\mainmatter"]
     for i, (part, messages, pages) in enumerate(parts, 1):
         name = os.path.basename(part["pdf"])
-        kicker = ("文件分割 %d/%d：接续 %s" % (i, len(parts),
-                  os.path.basename(parts[i - 2][0]["pdf"])) if i > 1
-                  else "文件 %d/%d" % (1, len(parts)))
+        if part.get("kind") == "wechat":
+            kicker = "微信聊天记录导出"
+            name = part["pdf"]
+        elif i > 1:
+            kicker = "文件分割 %d/%d：接续 %s" % (
+                i, len(parts), os.path.basename(parts[i - 2][0]["pdf"]))
+        else:
+            kicker = "文件 %d/%d" % (1, len(parts))
         out.append(r"\chatseam{%s}{%s}" % (escape(kicker), escape(name)))
         for day, day_title, msgs in chapters(messages):
             if day_title:
                 out.append(r"\chatday{%s}" % escape(day_title))
-            last_clock = None
+            last_day, last_min = None, None
             for msg in msgs:
-                stamp = clock(msg.get("stamp"))
-                if stamp and stamp != last_clock:
-                    out.append(r"\chatnotice{%s}" % escape(stamp))
-                    last_clock = stamp
-                who, text, quote, notice = line_of(msg)
+                day, minute = date_of(msg.get("stamp")), minutes_of(msg.get("stamp"))
+                if day != last_day:
+                    last_min = None               # a new day always shows one
+                if minute is not None and (last_min is None
+                                           or minute - last_min >= MINUTE_GAP):
+                    out.append(r"\chatnotice{%s}" % escape(clock(msg["stamp"])))
+                    last_min = minute
+                last_day = day
+                who, text, quote, notice = line_of(msg, manifest.get("other", "ben"))
                 if notice:
                     out.append(r"\chatnotice{%s}" % escape(notice))
                     continue
@@ -263,14 +311,29 @@ def tex_book(parts, manifest):
 
 
 def main():
-    manifest = json.load(open(sys.argv[1]))
     prefix = sys.argv[sys.argv.index("--out-prefix") + 1]
     parts = []
-    for part in manifest["parts"]:
-        messages, dropped, kept, pages = ct.build(part["pdf"], part["cache"])
-        parts.append((part, messages, pages))
-        print("%-22s %4d pages  %5d messages"
-              % (os.path.basename(part["pdf"]), pages, len(messages)))
+    if "--wechat" in sys.argv:
+        import chat_wechat as cw                # a WeChat export needs no OCR
+        path = sys.argv[sys.argv.index("--wechat") + 1]
+        name = os.path.splitext(os.path.basename(path))[0]
+        label = name.split("__")[0] or name
+        messages = [m for m in cw.load(path) if m["text"]]
+        manifest = {
+            "title": option("--title", "%s · 微信聊天记录" % label),
+            "subtitle": option("--subtitle", "微信聊天记录 · 转录稿"),
+            "author": option("--author", ""),
+            "other": option("--other", label),
+        }
+        parts.append(({"pdf": label, "kind": "wechat"}, messages, 0))
+        print("%-22s %5d messages（微信导出）" % (label, len(messages)))
+    else:
+        manifest = json.load(open(sys.argv[1]))
+        for part in manifest["parts"]:
+            messages, dropped, kept, pages = ct.build(part["pdf"], part["cache"])
+            parts.append((part, messages, pages))
+            print("%-22s %4d pages  %5d messages"
+                  % (os.path.basename(part["pdf"]), pages, len(messages)))
 
     open(prefix + ".txt", "w").write(text_book(parts, manifest))
     tex = tex_book(parts, manifest)
@@ -288,6 +351,10 @@ def main():
         print(log[-3000:])
         sys.exit("xelatex failed")
     print("wrote", prefix + ".pdf")
+
+
+def option(flag, default=""):
+    return sys.argv[sys.argv.index(flag) + 1] if flag in sys.argv else default
 
 
 if __name__ == "__main__":

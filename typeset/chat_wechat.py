@@ -14,6 +14,7 @@ No OCR is involved: unlike the screenshots, a WeChat export keeps the text.
 """
 
 import datetime
+import html
 import json
 import os
 import re
@@ -25,6 +26,11 @@ import chat_transcript as ct
 SELF = None                     # filled in from the export's own fields
 
 SIMPLE = {3: "[图片]", 34: "[语音]", 43: "[视频]", 47: "[表情]"}
+# WeChat's own lines, which sit centred in the chat rather than coming from
+# one of the two people
+SYSTEM = re.compile(r"通过了你的朋友验证请求|通過了你的朋友驗證請求|"
+                    r"现在我们可以开始聊天了|現在我們可以開始聊天了|"
+                    r"你已添加了|对方已开启朋友验证|你已通过.*好友验证")
 APPMSG = {"1": "链接", "5": "链接", "6": "文件", "19": "聊天记录", "24": "笔记",
           "33": "小程序", "36": "小程序", "40": "聊天记录", "51": "视频号",
           "62": "视频号", "63": "直播", "7": "视频号", "74": "文件", "82": "链接",
@@ -97,10 +103,15 @@ def line_of(row):
         root = xml_of(raw)
         if root is not None:
             text, quote_author, quoted = appmsg_text(root)
+    if text:
+        text = html.unescape(text)
     if not text:
         text = "[%s]" % (kind if kind is not None else "未知")
     when = datetime.datetime.fromtimestamp(row.get("createTime", 0))
-    return {"side": "mine" if row.get("fromSelf") else "theirs",
+    side = "mine" if row.get("fromSelf") else "theirs"
+    if SYSTEM.search(text):
+        side = "notice"
+    return {"side": side,
             "text": text, "quote": quoted or "",
             "quote_author": quote_author or "",
             "stamp": "%d/%d %02d:%02d" % (when.month, when.day, when.hour,
@@ -132,12 +143,13 @@ def main():
     messages = load(path)
     chat = [m for m in messages if m["text"]]
     title = os.path.splitext(os.path.basename(path))[0]
+    other = title.split("__")[0] or "对方"
     head = ["# %s（微信）" % title, "",
             "由微信导出（jsonl）直接读取，共 %d 条。图片、表情、语音、"
             "文件按类型标注，不收录内容。" % len(chat), ""]
     body = ct.render([{**m, "quote": ("%s: %s" % (m["quote_author"], m["quote"]))
                        if m["quote"] and m["quote_author"] else m["quote"]}
-                      for m in chat])
+                      for m in chat], other=other)
     text = "\n".join(head + body) + "\n"
     open(prefix + ".md", "w").write(text)
     open(prefix + ".txt", "w").write(

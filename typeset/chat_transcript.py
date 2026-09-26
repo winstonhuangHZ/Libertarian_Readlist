@@ -253,7 +253,7 @@ def stitch(pages):
     return out
 
 
-def render(messages):
+def render(messages, other="ben"):
     """The conversation itself, one bullet per message."""
     out = []
     stamp = None
@@ -265,7 +265,7 @@ def render(messages):
         if msg["side"] == "notice":
             out.append("- %s" % msg["text"])
             continue
-        who = "我" if msg["side"] == "mine" else "ben"
+        who = "我" if msg["side"] == "mine" else other
         if msg["quote"]:
             out.append("- %s：%s" % (who, msg["text"]))
             out.append("  > 引用 %s" % msg["quote"])
